@@ -22,11 +22,12 @@ body {
 }
 
 
+
+/* header */
 header {
     position: fixed;
     top: 0;
-    max-height: 75px;
-    padding: 0px 20px;
+    padding: 0px 30px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -34,8 +35,7 @@ header {
 }
 
 
-
-/* logo */
+/* .logo */
 .logo > img {
     width: 100%;
     height: 100%;
@@ -53,31 +53,29 @@ header {
 
 
 /* Nav */
-nav {
-    widsth: 100%;
-}
-
-nav > ul {
+#nav-bar > ul {
     width: 35vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-li > a {
-    color: #333;
-    text-decoration: none;
-}
 
 li {
     list-style: none;
 }
 
-nav > ul > li {
+#nav-bar > ul > li {
     margin: 20px 20px;
 }
 
-/* hero */
+.nav-link {
+    color: #333;
+    text-decoration: none;
+}
+
+
+/* #hero */
 #hero {
     display: flex;
     flex-direction: column;
@@ -137,6 +135,8 @@ input[type="submit"] {
 
 /* #features */
 #features {
+    max-width: 900px;
+    width: 100%;
 }
 
 #features .icon {
@@ -145,7 +145,11 @@ input[type="submit"] {
     justify-content: center;
     color: var(--color-orange);
     height: 125px;
-    width: 10vw;
+    width: 12vw;
+}
+
+#i-fire {
+    margin-left: 10px;
 }
 
 #features .desc {
@@ -157,6 +161,9 @@ input[type="submit"] {
     padding: 5px;
 }
 
+
+
+/* video */
 #how-it-works {
     margin-top: 50px;
     display: flex;
@@ -181,7 +188,7 @@ input[type="submit"] {
 
 .product {
     width: 33.33333%;
-    height: 300px;
+    height: 42vh;
     margin-right: 20px;
     
     border: 1px solid #000;
@@ -190,7 +197,8 @@ input[type="submit"] {
 
 .level {
     width: 100%;
-    height: 54px;
+    min-height: 50px;
+    height: auto;
     padding: 15px 0px;
     background: #ddd;
     
@@ -203,6 +211,8 @@ input[type="submit"] {
 
 .product > h2 {
     margin: 18px auto;
+    min-height: 10px;
+    height: auto;
     font-family: inherit;
     text-align: center;
     font-weight: 600;
@@ -247,10 +257,9 @@ footer {
 
 .footer > ul {
     margin-top: 20px;
-    margin-left: 765px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     text-align: right;
 }
 
@@ -266,4 +275,129 @@ footer {
     font-weight: 100;
     text-align: right;
     opacity: .6;
+}
+
+
+
+/* @media */
+@media (max-width: 375px) {
+    header {
+        padding: 0px 60px 0px 0px;
+    }
+    
+    .logo {
+        width: 50vw;
+    }
+    
+    .nav-bar > ul {
+        width: 0vw;
+    }
+    
+    #nav-bar > ul > li {
+        margin: 5px 5px;
+    }
+    
+    .logo > img {
+        max-width: 150px;
+        margin-left: 0;
+    }
+    
+    #features .icon {
+        width: 20vw;
+    }
+    
+    #how-it-works > iframe {
+        max-width: 360px;
+        width: 100%;
+    }
+    
+    .level {
+        font-size: 14px;
+        padding: 10px 0px;
+    }
+    
+    .product {
+        width: 100%;
+        min-height: 150px;
+        height: auto;
+        
+        margin-right: 0;
+        margin-bottom: 8px;
+        
+    }
+    
+    #pricing {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .product > .btn {
+        padding: 10px 15px;
+    }
+    
+    .product > h2 {
+        font-size: 18px;
+        margin: 12px auto;
+    }
+    
+    .product > ol > li {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    
+    .btn {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo > img {
+        max-width: 140px;
+        margin-left: 0;
+    }
+    
+    #nav-bar > ul {
+        width: 41vw;
+    }
+    
+    #nav-bar > ul > li {
+        margin: 5px 5px;
+        font-size: 13px;
+    }
+    
+    li {
+        text-align: center;
+    }
+    
+    .level {
+        min-height: 50px;
+        height: auto;
+    }
+    
+    #pricing {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .product {
+        width: 100%;
+        min-height: 250px;
+        height: auto;
+        
+        margin-bottom: 8px;
+    }
+    
+    .product > h2 {
+        margin: 9px auto;
+    }
+    
+    .product > ol > li {
+        text-align: center;
+    }
 }
