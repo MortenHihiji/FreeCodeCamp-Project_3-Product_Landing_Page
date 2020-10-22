@@ -18,6 +18,7 @@ body {
 }
 
 #page-wrapper {
+    padding: 0px 30px;
     position: relative;
 }
 
@@ -27,7 +28,6 @@ body {
 header {
     position: fixed;
     top: 0;
-    padding: 0px 30px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -66,7 +66,7 @@ li {
 }
 
 #nav-bar > ul > li {
-    margin: 20px 20px;
+    margin: 20px auto;
 }
 
 .nav-link {
@@ -188,7 +188,6 @@ input[type="submit"] {
 
 .product {
     width: 33.33333%;
-    height: 42vh;
     margin-right: 20px;
     
     border: 1px solid #000;
@@ -231,7 +230,7 @@ input[type="submit"] {
     display: block;
     
     padding: 10px 25px;
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
     
     font-family: inherit;
     font-weight: 500;
@@ -280,6 +279,45 @@ footer {
 
 
 /* @media */
+@media (max-width: 936px) {
+    .nav-link {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 826px) {
+    .nav-link {
+        font-size: 14px;
+    }
+    .logo > img {
+        margin-left: 0px;
+    }
+    .logo {
+        width: 50vw;
+}
+}
+
+@media (max-width: 612px) {
+    #header-img {
+        width: 200px;
+    }
+    .logo {
+        width: 45vw;
+}
+}
+
+@media (max-width: 425px) {
+    #page-wrapper {
+        padding: 0;
+    }
+    .logo {
+        width: 55vw;
+    }
+    #nav-bar > ul > li {
+        margin: 15px 10px;
+    }
+}
+
 @media (max-width: 375px) {
     header {
         padding: 0px 60px 0px 0px;
@@ -352,6 +390,7 @@ footer {
         margin-bottom: 20px;
     }
 }
+
 
 @media (max-width: 320px) {
     .logo > img {
